@@ -1,0 +1,175 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.fondo_andesa {
+    background-color: #fffacd;
+    color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.text-primary {
+    color: #333;
+}
+
+.card-header {
+    padding: 20px;
+    position: relative; /* Para posicionar la etiqueta de experiencia */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Contenedor general */
+.row {
+    display: flex; /* Flexbox para colocar los elementos horizontalmente */
+    align-items: center; /* Asegura que estén alineados verticalmente */
+    justify-content: space-between; /* Espacio entre el logo y la lista */
+    margin: 20px 0; /* Espaciado vertical */
+}
+
+.col {
+    flex: 1;
+    padding: 10px;
+    font-size: 25px;
+}
+
+
+.text-left {
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Logo */
+.logo-andesa {
+    max-width: 100%;
+    height: auto;
+    max-width: 380px;
+}
+
+/* Lista de servicios */
+.services-list {
+    padding-left: 0; /* Elimina el padding de la lista */
+    margin: 0;
+    font-size: 18px;
+    text-align: left; /* Alinea la lista a la izquierda */
+}
+
+.services-list li {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 8px 0; /* Espaciado entre elementos */
+}
+
+
+.label-danger {
+    position: absolute;
+    top: 60px; /* Ajustado para que esté un poco más abajo del título */
+    right: 1%; /* Alineado a la derecha */
+    transform: translateX(0) rotate(20deg); /* Centrado y rotado */
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 90px; /* Aumentado el padding horizontal para hacerla más larga */
+    font-size: 16px; /* Aumentado para mejor legibilidad */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px; /* Aumentado para esquinas más redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Media queries para dispositivos responsivos */
+
+/* Teléfonos (pantallas pequeñas) */
+@media (max-width: 576px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col {
+        padding: 10px;
+        flex: none;
+        width: 100%;
+    }
+
+    .services-list li {
+        font-size: 16px;
+    }
+
+    .label-danger {
+        top: 10px; /* Ajustado para mejor visualización en móviles */
+        left: 50%; /* Centrado horizontalmente */
+        transform: translateX(-50%) rotate(0deg); /* Centrado sin rotación */
+        font-size: 14px; /* Ajustado para mejor legibilidad */
+        padding: 5px 10px;
+    }
+
+    .card-footer {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+/* Tabletas (pantallas medianas) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        flex: none;
+        width: 100%;
+    }
+
+    .services-list {
+        text-align: center;
+    }
+
+    .label-danger {
+        font-size: 16px; /* Ajustado para mejor legibilidad */
+        padding: 8px 15px;
+    }
+}
+
+/* Laptops y computadoras de escritorio (pantallas grandes) */
+@media (min-width: 769px) {
+    .row {
+        flex-direction: row;
+    }
+
+    .services-list {
+        text-align: left;
+    }
+
+    .card-footer {
+        font-size: 14px;
+        text-align: right;
+    }
+}
